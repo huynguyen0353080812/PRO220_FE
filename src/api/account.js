@@ -13,7 +13,6 @@ export const createAccount = async (data) => {
 export const removeAccount = async (id) => {
     return instance.delete(`${URL}/${id}`);
 };
-D
 export const updateAccount = async (data) => {
     return instance.put(`/accounts/${data._id}`, _.omit(data, ['_id']));
 };
