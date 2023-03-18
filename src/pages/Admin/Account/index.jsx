@@ -54,7 +54,7 @@ const AccountManager = () => {
     const getAllAccount = (filter) => {
         getAccounts(filter)
             .then(({ data: res }) => {
-D                const newData = res.map((item) => {
+                const newData = res.map((item) => {
                     return {
                         key: item._id,
                         ...item,
@@ -219,7 +219,7 @@ D                const newData = res.map((item) => {
                     Thêm thành viên
                 </Button>
             </div>
-            <Table columns={columns} dataSource={data} rowKey="key"/>
+            <Table columns={columns} dataSource={data} rowKey="key" />
             {open && (
                 <CreateAccount open={open} onClose={setOpen} onRefetch={handleRefetch} checkShowroom={checkShowroom} />
             )}
